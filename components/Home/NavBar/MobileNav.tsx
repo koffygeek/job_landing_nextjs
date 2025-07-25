@@ -32,7 +32,7 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
           <CgClose onClick={closeNav} className='absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-8 h-8 ' />
         </div>
       </div>
-      MobileNav
+
     </div>
   )
 }
