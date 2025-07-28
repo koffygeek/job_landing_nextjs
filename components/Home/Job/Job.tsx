@@ -1,5 +1,6 @@
 import SectionHeading from '@/components/Helper/SectionHeading';
 import React from 'react'
+import JobCard from './JobCard';
 
 const jobs = [
     {
@@ -83,7 +84,22 @@ const Job = () => {
                 heading='Features Jobs'
                 subHeading='Know your worth and find the job that qualify your life'
             />
-            <div className='w-[95%] sm:w-[80%] mt-16 mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 items-center  '></div>
+            <div className='w-[95%] sm:w-[80%] mt-16 mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 items-center  '>
+                {jobs.map((job) => {
+                    return (
+                        <div
+                            key={job.id}
+                        >
+                            <JobCard job={job} />
+                        </div>
+                    );
+                })}
+            </div>
+            <div className='mt-10 text-center'>
+                <button className='mt-10 px-10 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200'>
+                    Load More Listing
+                </button>
+            </div>
         </div>
 
     )
