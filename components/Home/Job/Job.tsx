@@ -101,7 +101,6 @@ const Job = () => {
                 </button>
             </div>
         </div>
-
     )
 }
 
