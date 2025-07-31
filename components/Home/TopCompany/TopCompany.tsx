@@ -6,8 +6,13 @@ import 'react-multi-carousel/lib/styles.css';
 import TopCompanyCard from './TopCompanyCard';
 
 const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
   desktop: {
-    breakpoint: { max: 3000, min: 1324 },
+    breakpoint: { max: 1400, min: 1024 },
     items: 4,
     slidesToSlide: 3 // optional, default to 1.
   },
@@ -61,7 +66,7 @@ const TopCompany = () => {
         heading='Top Company Registered'
         subHeading='Some of the companies we have helped recruit excellent candidates over the years.'
       />
-      <div className='w-[80%] mx-auto mt-16  '>
+      <div className='w-[80%] mx-auto mt-10 '>
         <Carousel
           showDots={false}
           responsive={responsive}
@@ -74,7 +79,7 @@ const TopCompany = () => {
           })}
         </Carousel>
       </div>
-    </div >
+    </div>
   );
 };
 

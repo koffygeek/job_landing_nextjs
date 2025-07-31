@@ -40,7 +40,7 @@ const Nav = ({ openNav }: Props) => {
               <LuNetwork className='w-5 h-5 text-white' />
             </div>
             <h1 className='text-cl hidden sm:block md:text-2xl text-cyan-800 font-bold'>
-              DevHire
+              GrébéHire
             </h1>
           </div>
 
