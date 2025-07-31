@@ -8,7 +8,7 @@ type Props = {
   userRole: string;
 };
 
-const ReviewCard = ({ image, title, userRole, username }) => {
+const ReviewCard = ({ image, title, userRole, username }: Props) => {
   return (
     <div className='w-full lg:w-[60%] mx-auto'>
       <Image
