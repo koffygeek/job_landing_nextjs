@@ -1,25 +1,41 @@
-import React from 'react'
-import Hero from './Hero/Hero'
-import Category from './Category/Category'
-import Job from './Job/Job'
-import TopCompany from './TopCompany/TopCompany'
-import Info from './Info/info'
-import Price from './Price/Price'
-import Review from './Review/Review'
+'use client';
+import React, { useEffect } from 'react';
+import Hero from './Hero/Hero';
+import Category from './Category/Category';
+import Job from './Job/Job';
+import TopCompany from './TopCompany/TopCompany';
+import Info from './Info/info';
+import Price from './Price/Price';
+import Review from './Review/Review';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
-    return (
-        <div className='overflow-hidden h-[2000px]:'>
-            <Hero />
-            <Category />
-            <Job />
-            <TopCompany />
-            <Info />
-            <Price />
-            <Review />
-        </div>
-    )
-}
+  useEffect(() => {
+    const initAOS = async () => {
+      await import('aos');
+      AOS.init({
+        duration: 1000,
+        easing: 'ease',
+        once: true,
+        anchorPlacement: 'top-bottom'
+      });
+    };
 
-export default Home
+    initAOS();
+  }, []);
+  return (
+    <div className='overflow-hidden '>
+      <Hero />
+      <Category />
+      <Job />
+      <TopCompany />
+      <Info />
+      <Price />
+      <Review />
+    </div>
+  );
+};
+
+export default Home;
